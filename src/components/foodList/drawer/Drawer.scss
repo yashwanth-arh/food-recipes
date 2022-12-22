@@ -1,0 +1,33 @@
+.drawer-list{
+    display: flex;
+    justify-content: space-evenly;
+    span{
+        text-decoration: none;
+        line-height: 2;
+        cursor: pointer;
+        color: crimson;
+        margin: 0 5em 0 0;
+        font-weight: 500;
+    }
+    .recipe-region{
+        display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 13rem;
+    }
+}
+.recipe-header{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.5rem;
+    h4{
+        text-decoration: underline;
+        color: rgb(120, 0, 40);
+    }
+}
+.rs-btn-icon.rs-btn-sm > .rs-icon {
+    color: #fff;
+}
+.rs-btn-icon.rs-btn-sm > .rs-icon:hover {
+    color: #000;
+}
