@@ -8,7 +8,7 @@ const initialState = {
   isSuccess: false,
   message: "",
   loading: true,
-  to: 10,
+  to: 20,
   from: 1,
   count: "",
 };

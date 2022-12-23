@@ -14,12 +14,13 @@ import MenuItem from "@mui/material/MenuItem";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import logo from "../../assets/img/logo.png";
 import Drawer from "../foodList/drawer/Drawer";
+import "./Header.scss";
 
 const pages = ["Recipes"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  const [isScrolled, setIsScrolled] = React.useState(false);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -27,9 +28,17 @@ function Header() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "lightcoral" }}>
+    <AppBar
+      position="static"
+      style={{ backgroundColor: "lightcoral" }}
+      className={`flex ${isScrolled ? "scrolled" : ""}`}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <RestaurantIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

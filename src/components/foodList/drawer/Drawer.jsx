@@ -22,6 +22,7 @@ export default function DrawerApp() {
       to: 20,
     };
     dispatch(getFoodRecipe(arg));
+    setOpen(false);
   };
   return (
     <>
